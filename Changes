@@ -1,5 +1,7 @@
 Revision history for DPKG-Parse
 
+{{ $NEXT }}
+
 0.02      2015-05-25 19:44:06Z (TRIAL RELEASE)
           - fixes for current dpkg 'status' (RT#69920)
 

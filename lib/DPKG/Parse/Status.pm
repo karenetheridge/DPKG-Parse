@@ -34,7 +34,7 @@ See L<DPKG::Parse::Entry> for more information on the entry objects.
 
 package DPKG::Parse::Status;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03'; # TRIAL
 
 use DPKG::Parse::Entry;
 use Params::Validate qw(:all);
