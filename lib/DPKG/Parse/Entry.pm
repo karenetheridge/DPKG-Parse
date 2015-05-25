@@ -256,5 +256,9 @@ sub parse {
     }
 }
 
+=back
+
+=cut
+
 1;
 
