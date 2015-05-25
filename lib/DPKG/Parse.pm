@@ -1,10 +1,3 @@
-#
-# DPKG::Parse.pm
-# Created by: Adam Jacob, <holoway@cpan.org> 
-# Created on: 12/19/2005 02:21:03 PM PST
-#
-# $Id: $
-
 =head1 NAME
 
 DPKG::Parse - Parse various dpkg files into Perl Objects

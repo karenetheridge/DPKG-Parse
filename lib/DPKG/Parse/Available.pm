@@ -1,11 +1,3 @@
-#
-# DPKG::Parse::Available.pm
-# Created by: Adam Jacob, Marchex, <adam@marchex.com>
-# Created on: 12/19/2005 02:21:25 PM PST
-#
-# $Id: $
-#
-
 =head1 NAME
 
 DPKG::Parse::Available - Parse the "available" file 

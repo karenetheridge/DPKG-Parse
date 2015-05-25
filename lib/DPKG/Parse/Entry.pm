@@ -1,10 +1,3 @@
-#
-# DPKG::Parse::Entry.pm
-# Created by: Adam Jacob, Marchex, <adam@marchex.com>
-# Created on: 12/19/2005 02:22:57 PM PST
-#
-# $Id: $
-
 =head1 NAME
 
 DPKG::Parse::Entry - Parse a Package style entry 
