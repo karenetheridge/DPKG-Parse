@@ -1,5 +1,6 @@
 Revision history for DPKG-Parse
 
+{{ $NEXT }}
           - fixes for current dpkg 'status' (RT#69920)
 
 0.01      2005-12-21 00:45:00Z

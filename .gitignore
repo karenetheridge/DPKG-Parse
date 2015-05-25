@@ -1,0 +1,6 @@
+/.ackrc
+/.build/
+!/.gitignore
+/.latest
+/DPKG-Parse-*/
+/DPKG-Parse-*.tar.gz
