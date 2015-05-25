@@ -68,6 +68,8 @@ DPKG::Parse::Entry objects.
 
 package DPKG::Parse::Entry;
 
+our $VERSION = '0.02';
+
 use Params::Validate qw(:all);
 use base qw(Class::Accessor);
 use Carp;

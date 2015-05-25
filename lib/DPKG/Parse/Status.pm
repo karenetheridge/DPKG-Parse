@@ -41,6 +41,8 @@ See L<DPKG::Parse::Entry> for more information on the entry objects.
 
 package DPKG::Parse::Status;
 
+our $VERSION = '0.02';
+
 use DPKG::Parse::Entry;
 use Params::Validate qw(:all);
 use Class::C3;

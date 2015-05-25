@@ -40,6 +40,8 @@ See L<DPKG::Parse::Entry> for more information on the entry objects.
 
 package DPKG::Parse::Packages;
 
+our $VERSION = '0.02';
+
 use Params::Validate qw(:all);
 use Class::C3;
 use base qw(DPKG::Parse);
