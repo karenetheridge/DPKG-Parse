@@ -1,15 +1,15 @@
 =head1 NAME
 
-DPKG::Parse::Packages - Parse the Packages file 
+DPKG::Parse::Packages - Parse the Packages file
 
 =head1 SYNOPSIS
-    
+
     use DPKG::Parse::Packages;
-    
+
     my $packages = DPKG::Parse::Packages->new(
         'filename' => '/usr/src/packages/Packages',
     );
-    while (my $entry = $packages->next_package) { 
+    while (my $entry = $packages->next_package) {
         print $entry->package . " " . $entry->version . "\n";
     }
 
@@ -18,7 +18,7 @@ DPKG::Parse::Packages - Parse the Packages file
 =head1 DESCRIPTION
 
 L<DPKG::Parse::Packages> parses a dpkg/apt style Packages file and turns
-each entry into a L<DPKG::Parse::Entry> object.  
+each entry into a L<DPKG::Parse::Entry> object.
 
 See L<DPKG::Parse> for more information on the get_package and next_package
 methods.
@@ -44,7 +44,7 @@ use warnings;
 =item new('filename' => '/usr/src/packages/Packages')
 
 Creates a new DPKG::Parse::Packages object.  By default, it tries to open
-/usr/src/packages/Packages.  
+/usr/src/packages/Packages.
 
 =cut
 sub new {

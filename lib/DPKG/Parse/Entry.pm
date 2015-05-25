@@ -1,9 +1,9 @@
 =head1 NAME
 
-DPKG::Parse::Entry - Parse a Package style entry 
+DPKG::Parse::Entry - Parse a Package style entry
 
 =head1 SYNOPSIS
-    
+
     use DPKG::Parse::Entry;
 
     my $data = <<EOH;
@@ -21,7 +21,7 @@ DPKG::Parse::Entry - Parse a Package style entry
  Size: 4293154
  Installed-Size: 10312
  MD5sum: 2acf846b127b71a1fa1143214b2b85a9
- Description: Linux kernel binary image for version 2.6.12.2. 
+ Description: Linux kernel binary image for version 2.6.12.2.
  EOH
 
     my $entry = DPKG::Parse::Entry->new('data' => $data);
@@ -50,7 +50,7 @@ It should know all the attributes present in a Packages, available, and
 status file.
 
 See L<DPKG::Parse::Status>, L<DPKG::Parse::Available>, and
-L<DPKG::Parse::Packages> for more information on how to easily generate 
+L<DPKG::Parse::Packages> for more information on how to easily generate
 DPKG::Parse::Entry objects.
 
 =head1 METHODS
@@ -70,35 +70,35 @@ use strict;
 use warnings;
 
 DPKG::Parse::Entry->mk_accessors(qw(
-    architecture 
-    bugs 
+    architecture
+    bugs
     build_essential
-    conflicts 
+    conflicts
     config_version
     conffiles
-    depends 
-    description 
-    enhances 
-    essential 
-    filename 
+    depends
+    description
+    enhances
+    essential
+    filename
     installed_size
-    maintainer 
-    md5sum 
-    origin 
-    package 
-    priority 
-    provides 
+    maintainer
+    md5sum
+    origin
+    package
+    priority
+    provides
     pre_depends
-    recommends 
-    replaces 
-    size 
-    source 
-    section 
-    suggests 
-    status 
-    task 
+    recommends
+    replaces
+    size
+    source
+    section
+    suggests
+    status
+    task
     tag
-    url 
+    url
     version
     original_maintainer
     homepage
@@ -128,40 +128,40 @@ DPKG::Parse::Entry->mk_ro_accessors(qw(__debug __line_num));
 =item Accessor Methods
 
 The following accessor methods correspond directly to the values found in
-the parsed Package block, with one exception: "-" characters are replaced 
+the parsed Package block, with one exception: "-" characters are replaced
 with "_".  So, "build-essential" becomes "build_essential".
 
 The accessors are:
 
-    architecture 
-    bugs 
+    architecture
+    bugs
     build_essential
-    conflicts 
+    conflicts
     config_version
     conffiles
-    depends 
-    description 
-    enhances 
-    essential 
-    filename 
+    depends
+    description
+    enhances
+    essential
+    filename
     installed_size
-    maintainer 
-    md5sum 
-    origin 
-    package 
-    priority 
-    provides 
+    maintainer
+    md5sum
+    origin
+    package
+    priority
+    provides
     pre_depends
-    recommends 
-    replaces 
-    size 
-    source 
-    section 
-    suggests 
-    status 
-    task 
+    recommends
+    replaces
+    size
+    source
+    section
+    suggests
+    status
+    task
     tag
-    url 
+    url
     version
 
 =item new('data' => $data, 'debug' => 1)

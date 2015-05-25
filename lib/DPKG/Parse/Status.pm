@@ -1,18 +1,18 @@
 =head1 NAME
 
-DPKG::Parse::Status - Parse the "status" file 
+DPKG::Parse::Status - Parse the "status" file
 
 =head1 SYNOPSIS
-    
+
     use DPKG::Parse::Status;
-    
+
     my $status = DPKG::Parse::Status->new;
-    while (my $entry = $status->next_package) { 
+    while (my $entry = $status->next_package) {
         print $entry->package . " " . $entry->version . "\n";
     }
 
     my $postfix = $status->get_package('name' => 'postfix');
-    
+
     my $postfix = $status->get_installed('name' => 'postfix');
 
 =head1 DESCRIPTION
@@ -48,7 +48,7 @@ DPKG::Parse::Status->mk_accessors(qw(installed));
 =item new('filename' => '/var/lib/dpkg/status')
 
 Creates a new DPKG::Parse::Status object.  By default, it tries to open
-/var/lib/dpkg/status.  
+/var/lib/dpkg/status.
 
 =cut
 sub new {
@@ -66,7 +66,7 @@ sub new {
 =item parse
 
 Calls DPKG::Parse::parse, and populates the "installed" accessor with a hash
-of packages whose "status" is "install ok installed". 
+of packages whose "status" is "install ok installed".
 
 =cut
 sub parse {
@@ -75,7 +75,7 @@ sub parse {
     my $installed;
     foreach my $entry (@{$pkg->entryarray}) {
         if ($entry->status =~ /^install ok installed$/) {
-           $installed->{$entry->package} = $entry; 
+           $installed->{$entry->package} = $entry;
         }
     }
     $pkg->installed($installed);

@@ -1,13 +1,13 @@
 =head1 NAME
 
-DPKG::Parse::Available - Parse the "available" file 
+DPKG::Parse::Available - Parse the "available" file
 
 =head1 SYNOPSIS
-    
+
     use DPKG::Parse::Available;
-    
+
     my $available = DPKG::Parse::Available->new;
-    while (my $entry = $available->next_package) { 
+    while (my $entry = $available->next_package) {
         print $entry->package . " " . $entry->version . "\n";
     }
 
@@ -43,7 +43,7 @@ use warnings;
 =item new('filename' => '/var/lib/dpkg/available')
 
 Creates a new DPKG::Parse::Available object.  By default, it tries to open
-/var/lib/dpkg/available.  
+/var/lib/dpkg/available.
 
 =cut
 sub new {

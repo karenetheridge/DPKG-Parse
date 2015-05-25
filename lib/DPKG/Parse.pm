@@ -3,22 +3,22 @@
 DPKG::Parse - Parse various dpkg files into Perl Objects
 
 =head1 SYNOPSIS
-    
+
     use DPKG::Parse::Status;
     my $status = DPKG::Parse::Status->new;
-    while (my $entry = $status->next_package) { 
+    while (my $entry = $status->next_package) {
         print $entry->package . " " . $entry->version . "\n";
     }
 
     use DPKG::Parse::Available;
     my $available = DPKG::Parse::Available->new;
-    while (my $entry = $available->next_package) { 
+    while (my $entry = $available->next_package) {
         print $entry->package . " " . $entry->version . "\n";
     }
 
 =head1 DESCRIPTION
 
-DPKG::Parse contains utilities to parse the various files created by 
+DPKG::Parse contains utilities to parse the various files created by
 dpkg and turn them into helpful Perl objects.  Current files understood
 by various DPKG::Parse modules:
 
@@ -60,14 +60,14 @@ Access to the raw array of entries in a given file.
 
 =item entryhash
 
-Access to the raw hash of entries.  The key is determined by the module, 
+Access to the raw hash of entries.  The key is determined by the module,
 but is usually the Package name.
 
 =item new('filename' => '/var/lib/dpkg/status');
 
 A generic new function; takes a filename and calls the filename() accessor
 with it.  Should not be called directly, but through on of the children of
-this package. 
+this package.
 
 =cut
 sub new {
@@ -132,8 +132,8 @@ sub parse_package_format {
 =item get_package('name' => 'postfix', 'hash' => 'entryhash');
 
 The value of a hash, if it exists.  By default, it uses the value returned
-by the "entryhash" accessor, but that can be overridden with the "hash" 
-parameter.  Usually returns a L<DPKG::Parse::Entry> object. 
+by the "entryhash" accessor, but that can be overridden with the "hash"
+parameter.  Usually returns a L<DPKG::Parse::Entry> object.
 
 =cut
 sub get_package {
@@ -153,7 +153,7 @@ sub get_package {
 
 =item next_package
 
-Shifts the next value off the array stored in the entryarray() accessor.  
+Shifts the next value off the array stored in the entryarray() accessor.
 If you want to access the raw values, do not use this function!  It shifts!
 
 =cut
@@ -169,7 +169,7 @@ __END__
 
 =head1 SEE ALSO
 
-L<DPKG::Parse::Status>, L<DPKG::Parse::Available>, L<DPKG::Parse::Packages>, 
+L<DPKG::Parse::Status>, L<DPKG::Parse::Available>, L<DPKG::Parse::Packages>,
 L<DPKG::Parse::Entry>
 
 =head1 AUTHOR
