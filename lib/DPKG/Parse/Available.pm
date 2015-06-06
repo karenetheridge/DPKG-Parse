@@ -32,7 +32,7 @@ See L<DPKG::Parse::Entry> for more information on the entry objects.
 
 package DPKG::Parse::Available;
 
-our $VERSION = '0.03'; # TRIAL
+our $VERSION = '0.04';
 
 use Params::Validate qw(:all);
 use Class::C3;

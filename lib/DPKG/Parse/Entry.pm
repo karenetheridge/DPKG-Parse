@@ -61,7 +61,7 @@ DPKG::Parse::Entry objects.
 
 package DPKG::Parse::Entry;
 
-our $VERSION = '0.03'; # TRIAL
+our $VERSION = '0.04';
 
 use Params::Validate qw(:all);
 use base qw(Class::Accessor);

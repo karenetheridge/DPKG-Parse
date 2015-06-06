@@ -48,7 +48,7 @@ use warnings;
 DPKG::Parse->mk_accessors(qw(filename entryarray entryhash));
 DPKG::Parse->mk_ro_accessors('debug');
 
-our $VERSION = '0.03'; # TRIAL
+our $VERSION = '0.04';
 
 =item filename($filename)
 

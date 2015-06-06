@@ -1,5 +1,7 @@
 Revision history for DPKG-Parse
 
+{{ $NEXT }}
+
 0.03      2015-06-06 20:23:34Z
           - stable release of 0.02
 
